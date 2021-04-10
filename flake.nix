@@ -9,13 +9,13 @@
 
       stdenv.mkDerivation rec {
         name = "devilutionX_sk4zuzu";
-        version = "da373f351d345b6fa2e08125bc7195fff17d2448";
+        version = "1.2.0";
 
         src = fetchFromGitHub {
           owner = "diasurgical";
           repo = "devilutionX";
           rev = version;
-          sha256 = "sha256-iyQ0gmob9jcw/BGsUu8U4UHam8yyIK2aWTcMwUy1XjQ=";
+          sha256 = "sha256-P+X5q2a5iq+43FI73qbfdLGqJsiEwHqCWlbIo8CfnQw=";
         };
 
         cmakeFlags = ''
@@ -24,7 +24,7 @@
           -DDEBUG=OFF
           -DHELLFIRE=ON
           -DUBSAN=OFF
-          -DVERSION_NUM=0.0.0
+          -DVERSION_NUM=1.2.0
         '';
 
         nativeBuildInputs = [ cmake pkgconfig ];
